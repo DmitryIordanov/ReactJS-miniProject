@@ -1,0 +1,8 @@
+.mySelect{
+    border: 1px solid teal;
+    color: teal;
+    padding: 7.5px 5px;
+    outline: none;
+    transition: .3s;
+    cursor: pointer;
+}
