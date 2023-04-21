@@ -72,11 +72,12 @@
     font-weight: 500;
     font-family: 'Roboto', sans-serif;
     transition: .3s;
-    padding: 25px;
+    padding: 20.3px;
 }
 .navbar__items a:hover{
     color: #000000;
     background: #cdf3ff;
+    box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.3);
 }
 .NotFound{
     font-weight: 500;
@@ -84,4 +85,16 @@
     font-size: 50px;
     text-align: center;
     margin-top: 40px;
+}
+.post__btn{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.post__btn button{
+    margin: auto 0;
+}
+.Post__content li{
+    margin-top: 30px;
+    list-style-type: none;
 }
