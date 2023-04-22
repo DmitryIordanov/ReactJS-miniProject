@@ -63,7 +63,7 @@ const Posts = () => {
                     ?<div style={{display: 'flex', justifyContent: 'center', marginTop: '25px'}}>
                         <MyLoader></MyLoader>
                     </div>
-                    :<PostList remove={removePost} posts={sortedAndSearchPosts} title={'Список постов JavaScript'}/>
+                    :<PostList remove={removePost} posts={sortedAndSearchPosts} title={'Список постов'}/>
                 }
                 <MyPagination
                     totalPage={totalPage}

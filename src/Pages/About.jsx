@@ -2,8 +2,8 @@ import React from 'react';
 
 const About = () => {
     return (
-        <div>
-            ABOUT!
+        <div className="container">
+           <h1 style={{textAlign: "center"}}>ABOUT!</h1>
         </div>
     );
 };
