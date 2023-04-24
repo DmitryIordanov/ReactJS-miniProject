@@ -5,6 +5,7 @@ import MySelect from "./UI/Select/MySelect";
 const PostFilter = ({filter, setFilter}) => {
     return (
         <div>
+            <h3 className="text__search">Поиск постов</h3>
             <MyInput
                 value={filter.query}
                 onChange={e => setFilter({...filter, query: e.target.value})}

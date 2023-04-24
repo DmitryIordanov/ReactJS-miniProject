@@ -1,4 +1,4 @@
-import React, {useEffect, useState} from "react";
+import React, {useContext, useEffect, useState} from "react";
 import {usePosts} from "../hooks/usePosts";
 import {useFetching} from "../hooks/useFetching";
 import PostServise from "../API/PostServise";
@@ -10,14 +10,17 @@ import PostFilter from "../Comp/PostFilter";
 import MyLoader from "../Comp/UI/Loader/MyLoader";
 import PostList from "../Comp/PostList";
 import MyPagination from "../Comp/UI/Pagination/MyPagination";
+import {AuthCreatePost} from "../context";
 
 const Posts = () => {
+    const {isCreatePost, setIsCreatePost} = useContext(AuthCreatePost)
+
     const [posts, setPosts] = useState([])
     const [filter, setFilter] = useState({sort: '', query: ''})
     const [modal, setModal] = useState(false);
     const sortedAndSearchPosts = usePosts(posts, filter.sort, filter.query)
     const [totalPage, setTotalPage] = useState(0)
-    const [limit, setLimit] = useState(5)
+    const [limit, setLimit] = useState(6)
     const [page, setPage] = useState(1)
 
     const [fetchPosts, isPostsLoading, postError] = useFetching(async () => {
@@ -45,13 +48,18 @@ const Posts = () => {
     return (
         <div className="App">
             <div className='container'>
-                <MyButton style={{marginTop: '15px'}} onClick={() => setModal(true)}>
-                    Создать пост
-                </MyButton>
-                <MyModal visible={modal} setVisible={setModal}>
-                    <PostForm create={createPost}/>
-                </MyModal>
-                <hr style={{margin: "15px 0"}}/>
+                {isCreatePost
+                    ?<div>
+                        <MyButton style={{marginTop: '15px'}} onClick={() => setModal(true)}>
+                            Создать пост
+                        </MyButton>
+                        <hr style={{margin: "15px 0"}}/>
+                        <MyModal visible={modal} setVisible={setModal}>
+                            <PostForm create={createPost}/>
+                        </MyModal>
+                    </div>
+                    :<div></div>
+                }
                 <PostFilter
                     filter={filter}
                     setFilter={setFilter}

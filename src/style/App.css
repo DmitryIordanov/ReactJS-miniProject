@@ -2,6 +2,7 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Roboto', sans-serif;
 }
 html, body{
     height: 100%;
@@ -22,35 +23,58 @@ html, body{
     margin-left: auto;
     flex: 1 1 auto;
 }
+.row{
+    display: grid;
+    justify-content: center;
+    align-items: center;
+    grid-template-columns: 450px 450px;
+    grid-gap: 25px;
+    margin-top: 25px;
+}
 .post{
     display: flex;
     flex-direction: column;
-    width: 600px;
-    height: 300px;
+    width: 450px;
+    height: 430px;
     justify-content: center;
     text-align: center;
-    margin: auto;
-    margin-top: 15px;
-    border: 2px solid teal;
-    padding: 15px;
+    border-radius: 15px;
 }
-.body{
+.content__posts{
+    width: 100%;
+    height: 100%;
+    background: #f1f7ff;
+}
+.title__posts{
+    margin-top: 10px;
+    font-size: 20px;
+}
+.body__posts{
+    font-size: 13px;
     margin-bottom: 15px;
     margin-top: 15px;
 }
+.img__posts{
+    width: 100%;
+    height: 250px;
+}
+.img__posts img{
+    width: 100%;
+    border-radius: 15px 15px 0px 0px;
+}
 .post-enter {
-    transform: translateX(-350px);
+    opacity: 0;
 }
 .post-enter-active {
-    transform: translateX(0px);
-    transition: all 500ms ease-in;
+    opacity: 1;
+    transition: opacity 500ms ease-in;
 }
 .post-exit {
     opacity: 1;
 }
 .post-exit-active {
-    transform: translateX(-350px);
-    transition: all 500ms ease-in;
+    opacity: 0;
+    transition: opacity 500ms ease-in;
 }
 .pagination__wrap{
     display: flex;
@@ -83,7 +107,6 @@ html, body{
     text-decoration: none;
     color: #424242;
     font-weight: 500;
-    font-family: 'Roboto', sans-serif;
     transition: .3s;
     padding: 20.3px;
 }
@@ -93,7 +116,6 @@ html, body{
 }
 .NotFound{
     font-weight: 500;
-    font-family: 'Roboto', sans-serif;
     font-size: 50px;
     text-align: center;
     margin-top: 40px;
@@ -138,7 +160,6 @@ html, body{
 }
 .footer a{
     font-weight: 500;
-    font-family: 'Roboto', sans-serif;
     font-size: 13px;
     margin-top: 30px;
     padding: 5px;
@@ -151,4 +172,18 @@ html, body{
 .footer a:hover{
     color: #000000;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
+}
+.logo a{
+    font-weight: 500;
+    font-size: 23px;
+    text-decoration: none;
+    color: #424242;
+    transition: .3s;
+}
+.logo a:hover{
+    color: #000;
+}
+.text__search{
+    color: #424242;
+    margin: 5px 0;
 }

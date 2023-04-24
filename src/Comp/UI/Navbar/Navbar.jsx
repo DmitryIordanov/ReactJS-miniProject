@@ -13,9 +13,10 @@ const Navbar = () => {
 
     return (
         <div className="navbar">
+            <div className="logo"><Link to="/">LocalHost</Link></div>
             <div className="navbar__items">
-                <Link to="/posts">Posts</Link>
-                <Link to="/about">About</Link>
+                <Link to="/posts">Блог</Link>
+                <Link to="/about">О нас</Link>
             </div>
             <MyButton onClick={logout}>Sing out</MyButton>
         </div>
