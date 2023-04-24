@@ -30,11 +30,11 @@ const PostsPage = () => {
                 </div>
                 :<div className="Post__content">
                     <li><h1>ID: {params.id}</h1></li>
-                    <li><h1>Title: {post.title}</h1></li>
-                    <li><div>Body: {post.body}</div></li>
+                    <li><h1>Назва: {post.title}</h1></li>
+                    <li><div>Опис: {post.body}</div></li>
                 </div>
             }
-            <h1 style={{marginTop: 30}}>Комментарии</h1>
+            <h1 style={{marginTop: 30}}>Коментарі</h1>
             {isLoadingComm
                 ?<div style={{display: 'flex', justifyContent: 'center', marginTop: '25px'}}>
                     <MyLoader></MyLoader>

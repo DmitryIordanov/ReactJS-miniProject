@@ -16,9 +16,9 @@ const PostItem = (props) => {
                 <h1 className='title__posts'>{props.post.title.slice(0, 45)}</h1>
                 <div className='body__posts'><p>{props.post.body}</p></div>
                 <div className='post__btn'>
-                    <MyButton onClick={() => router(`/posts/${props.post.id}`)}>Открыть</MyButton>
+                    <MyButton onClick={() => router(`/posts/${props.post.id}`)}>Відкрити</MyButton>
                     {isCreatePost
-                        ?<MyButton onClick={() => props.remove(props.post)}>Удалить</MyButton>
+                        ?<MyButton onClick={() => props.remove(props.post)}>Видалити</MyButton>
                         :null
                     }
                 </div>

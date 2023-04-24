@@ -1,3 +1,4 @@
+/* Global Style */
 *{
     padding: 0;
     margin: 0;
@@ -31,6 +32,9 @@ html, body{
     grid-gap: 25px;
     margin-top: 25px;
 }
+
+/* Style for posts and content */
+
 .post{
     display: flex;
     flex-direction: column;
@@ -43,7 +47,7 @@ html, body{
 .content__posts{
     width: 100%;
     height: 100%;
-    background: #f1f7ff;
+    background: #e0edff;
 }
 .title__posts{
     margin-top: 10px;
@@ -62,6 +66,18 @@ html, body{
     width: 100%;
     border-radius: 15px 15px 0px 0px;
 }
+.post__btn{
+    display: flex;
+    justify-content: space-around;
+    width: 100%;
+}
+.post__btn button{
+    margin: auto 0;
+}
+.Post__content li{
+    margin-top: 30px;
+    list-style-type: none;
+}
 .post-enter {
     opacity: 0;
 }
@@ -76,6 +92,9 @@ html, body{
     opacity: 0;
     transition: opacity 500ms ease-in;
 }
+
+/* Pagination for posts */
+
 .pagination__wrap{
     display: flex;
     justify-content: center;
@@ -84,13 +103,25 @@ html, body{
 }
 .pagination_elem{
     padding: 10px 15px;
-    border: 1px solid teal;
     cursor: pointer;
+    border-radius: 15%;
+    transition: .2s;
+}
+.pagination_elem:hover{
+    background: #4da9a9;
+    font-weight: bold;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px teal;
 }
 .pagination_elem__current{
-    border: 2px solid orange;
+    background: teal;
     font-weight: bold;
+    color: #fff;
+    box-shadow: 0px 0px 10px 0px teal;
 }
+
+/* Style NavBar */
+
 .navbar{
     display: flex;
     height: 60px;
@@ -114,24 +145,18 @@ html, body{
     color: #000000;
     box-shadow: 0px -5px 10px 0px rgba(0, 0, 0, 0.3);
 }
+
+/* Style for page NotFound */
+
 .NotFound{
     font-weight: 500;
     font-size: 50px;
     text-align: center;
     margin-top: 40px;
 }
-.post__btn{
-    display: flex;
-    justify-content: space-around;
-    width: 100%;
-}
-.post__btn button{
-    margin: auto 0;
-}
-.Post__content li{
-    margin-top: 30px;
-    list-style-type: none;
-}
+
+/* Comment block for template page */
+
 .comment__block{
     background: aliceblue;
     border-radius: 5px;
@@ -143,12 +168,18 @@ html, body{
     border-radius: 3px;
     background: #dce1ec;
 }
+
+/* Login block page Login */
+
 .login__block{
     width: 500px;
     margin-right: auto;
     margin-left: auto;
     text-align: center;
 }
+
+/* Footer style */
+
 .footer{
     display: flex;
     justify-content: center;
@@ -173,6 +204,9 @@ html, body{
     color: #000000;
     box-shadow: 0px 3px 10px 0px rgba(0, 0, 0, 0.3);
 }
+
+/* Logo for web-site */
+
 .logo a{
     font-weight: 500;
     font-size: 23px;
@@ -183,7 +217,24 @@ html, body{
 .logo a:hover{
     color: #000;
 }
+
+/* Filter block style */
+
 .text__search{
     color: #424242;
     margin: 5px 0;
+}
+
+/* About page style */
+
+.about_content__block h1{
+    text-align: center;
+    margin-top: 30px;
+    font-size: 28px;
+    color: #252525;
+}
+.about_content__block p{
+    margin: 25px auto;
+    text-align: center;
+    max-width: 700px;
 }

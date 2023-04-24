@@ -16,9 +16,12 @@ const Navbar = () => {
             <div className="logo"><Link to="/">LocalHost</Link></div>
             <div className="navbar__items">
                 <Link to="/posts">Блог</Link>
-                <Link to="/about">О нас</Link>
+                <Link to="/about">Про нас</Link>
             </div>
-            <MyButton onClick={logout}>Sing out</MyButton>
+            {isAuth
+                ?<MyButton onClick={logout}>Вийти</MyButton>
+                :null
+            }
         </div>
     );
 };

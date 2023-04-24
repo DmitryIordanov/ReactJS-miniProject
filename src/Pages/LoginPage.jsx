@@ -12,11 +12,11 @@ const LoginPage = () => {
     }
     return (
         <div className="container">
-            <h1 style={{textAlign:"center", marginTop: 50}}>Войдите в ваш аккаунт</h1>
+            <h1 style={{textAlign:"center", marginTop: 50}}>Увійдіть до вашого облікового запису</h1>
             <form onSubmit={login} className="login__block">
-                <MyInput type="text" placeholder="Введите логин..."/>
-                <MyInput type="password" placeholder="Введите пароль..."/>
-                <MyButton>Войти</MyButton>
+                <MyInput type="text" placeholder="Введіть логін..."/>
+                <MyInput type="password" placeholder="Введіть пароль..."/>
+                <MyButton>Увійти</MyButton>
             </form>
         </div>
     );

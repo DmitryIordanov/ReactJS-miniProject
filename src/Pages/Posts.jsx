@@ -11,6 +11,7 @@ import MyLoader from "../Comp/UI/Loader/MyLoader";
 import PostList from "../Comp/PostList";
 import MyPagination from "../Comp/UI/Pagination/MyPagination";
 import {AuthCreatePost} from "../context";
+import MainFon from "../Comp/StyleComp/MainFon";
 
 const Posts = () => {
     const {isCreatePost, setIsCreatePost} = useContext(AuthCreatePost)
@@ -47,11 +48,15 @@ const Posts = () => {
 
     return (
         <div className="App">
+            <MainFon
+                title="Блог"
+                desc="Ця сторінка блогу, тут ви можете знайти всі статті та не тільки."
+            />
             <div className='container'>
                 {isCreatePost
                     ?<div>
                         <MyButton style={{marginTop: '15px'}} onClick={() => setModal(true)}>
-                            Создать пост
+                            Створити пост
                         </MyButton>
                         <hr style={{margin: "15px 0"}}/>
                         <MyModal visible={modal} setVisible={setModal}>

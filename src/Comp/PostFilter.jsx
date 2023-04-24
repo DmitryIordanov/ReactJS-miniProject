@@ -5,21 +5,21 @@ import MySelect from "./UI/Select/MySelect";
 const PostFilter = ({filter, setFilter}) => {
     return (
         <div>
-            <h3 className="text__search">Поиск постов</h3>
+            <h3 className="text__search">Пошук постів</h3>
             <MyInput
                 value={filter.query}
                 onChange={e => setFilter({...filter, query: e.target.value})}
-                placeholder={'Поиск...'}
+                placeholder={'Пошук...'}
             >
             </MyInput>
             <hr style={{margin: "15px 0"}}/>
             <MySelect
                 value={filter.sort}
                 onChange={selectedSort => setFilter({...filter, sort: selectedSort})}
-                defaultValue="По умолчанию"
+                defaultValue="За замовчуванням"
                 options={[
-                    {value: 'title', name: 'По названию'},
-                    {value: 'body', name: 'По описанию'}
+                    {value: 'title', name: 'За назвою'},
+                    {value: 'body', name: 'За описом'}
                 ]}
             >
             </MySelect>
